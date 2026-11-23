@@ -11,19 +11,29 @@
 
 렌더링의 모든 단계가 이 수학 위에 있습니다.
 
-**핵심 주제**
-- 벡터 공간, 기저, 선형 변환으로서의 행렬
-- 기저 변환과 좌표계 (Local → World → View → Clip → NDC → Screen)
-- 동차 좌표(homogeneous coordinates)와 아핀 변환
-- 사영 변환과 원근 분할(perspective divide)
-- 회전 표현: 회전 행렬, 오일러 각, 쿼터니언, 축-각
-- 법선 벡터 변환 (역전치 행렬)
+**교재** ([ADR 0003](../docs/decisions/0003-journal-and-stage0-textbook.md))
+- 주 교재: *3D Math Primer for Graphics and Game Development* + 3Blue1Brown *Essence of Linear Algebra*
+- 참고서: Strang *Introduction to Linear Algebra* (더 깊이 보고 싶은 주제만)
+
+**공부 단위**
+
+| 단위 | 주제 | 핵심 질문 | 상태 |
+|---|---|---|---|
+| 0-1 | 벡터 연산의 기하학 | 내적과 외적은 기하학적으로 무엇인가? | 🟨 |
+| 0-2 | 행렬 = 선형 변환 | 행렬 곱의 순서는 왜 중요한가? 행 벡터와 열 벡터 규약은 무엇이 다른가? | ⬜ |
+| 0-3 | 기저와 좌표계 | Local → World → View 변환은 결국 무엇을 하는 것인가? | ⬜ |
+| 0-4 | 동차 좌표와 아핀 변환 | 이동은 선형 변환이 아닌데, 어떻게 행렬로 표현하는가? | ⬜ |
+| 0-5 | 사영 변환 | 원근 투영 행렬은 어떻게 유도되고, 깊이는 왜 비선형인가? | ⬜ |
+| 0-6 | 회전 표현 | 짐벌 락은 왜 생기고, 쿼터니언은 어떻게 해결하는가? | ⬜ |
+| 0-7 | 법선 변환 | 법선에는 왜 역전치 행렬을 써야 하는가? | ⬜ |
+
+> **주의: 행 벡터 vs 열 벡터 규약.** DirectX와 UE는 행 벡터(`v·M`), OpenGL과 대부분의 수학책은 열 벡터(`M·v`)를 쓴다. 두 규약에서는 행렬이 서로 전치 관계이고, 곱하는 순서가 반대가 된다. 책의 식을 엔진 코드와 비교할 때 혼란의 원인 1순위다.
 
 **문헌**
-- [ ] Gilbert Strang, *Introduction to Linear Algebra*: 선형대수의 정석
-- [ ] 3Blue1Brown, *Essence of Linear Algebra* (영상 시리즈): 기하학적 직관
-- [ ] Fletcher Dunn & Ian Parberry, *3D Math Primer for Graphics and Game Development*: 게임·그래픽스 관점의 3D 수학
-- [ ] Eric Lengyel, *Foundations of Game Engine Development, Vol. 1: Mathematics*: 더 엄밀한 엔진 수학
+- [ ] Fletcher Dunn & Ian Parberry, *3D Math Primer for Graphics and Game Development* (온라인 무료 공개): **주 교재**
+- [ ] 3Blue1Brown, *Essence of Linear Algebra* (영상 시리즈): **주 교재**, 기하학적 직관
+- [ ] Gilbert Strang, *Introduction to Linear Algebra*: 참고서
+- [ ] Eric Lengyel, *Foundations of Game Engine Development, Vol. 1: Mathematics*: 더 엄밀한 엔진 수학 (선택)
 
 **이해 확인**
 - 법선 벡터를 변환할 때 왜 모델 행렬이 아니라 **역전치 행렬**을 써야 하는가? 유도하라

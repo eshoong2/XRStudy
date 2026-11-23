@@ -32,6 +32,7 @@ XR(VR/AR/MR)의 **몰입감과 현실감을 높이는 기술**을 이해하고, 
 XRStudy/
 ├── README.md
 ├── roadmap/              # 무엇을, 어떤 순서로, 어디까지 공부할지
+├── journal/              # 매일의 공부 일지 (날것의 기록)
 ├── notes/                # 분야별 개념 노트 (rendering/ tracking/ perception/ display/ math/)
 ├── papers/               # 논문 분석 (6가지 질문 템플릿)
 └── docs/decisions/       # 학습 방향 결정 기록 (ADR)
