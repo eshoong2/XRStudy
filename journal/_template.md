@@ -18,11 +18,4 @@
 
 ## 다음에 할 것
 
-# Essence of linear argebra(선형대수의 본질)
-- Chapter1 벡터(Vector)
-선형대수에서의 벡터는 원점에 뿌리를 두고 덧셈과, 곱셉(스케일링) 가능
-[2 ] x +2
-[1 ] y +1
-[-3] z -3
-
-- Chapter2 선형 결합, 생성(span), 기저 벡터
+-
